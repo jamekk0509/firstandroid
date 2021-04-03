@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Day1</string>
+
+    <string name="hello_text">Hello Everyone</string>
+    <string name="hello_world">hello world</string>
+    <string name="button" translatable="false">Click me</string>
+
+
+    <string-array name="planets">
+        <item>mars</item>
+        <item>venus</item>
+        <item>earth</item>
+        <item>neptune</item> >
+    </string-array>
+
+</resources>
