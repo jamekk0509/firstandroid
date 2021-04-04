@@ -137,12 +137,32 @@ public class MainActivity extends AppCompatActivity {
         String newName2 = changeName((xxx) -> handleJavaCallback()).toUpperCase();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: ");
+    }
+
+    @Override
+    protected void onResume() {
+
+        Log.d(TAG, "onResume: ");
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        Log.d(TAG, "onDestroy: ");
+        super.onDestroy();
+    }
+
     private void sendTextIntentExample(String userInput) {
         //refer to https://developer.android.com/training/sharing/send#send-text-content
         Intent textIntent = new Intent();
 
         textIntent.setAction(Intent.ACTION_SEND);
-        textIntent.putExtra(Intent.EXTRA_TEXT, "James's app: "+ userInput);
+        textIntent.putExtra(Intent.EXTRA_TEXT, "James's app: " + userInput);
         textIntent.setType("text/plain"); //select the MIME type
 /*
 Optionally, you can add extras to include more information, such as email recipients
